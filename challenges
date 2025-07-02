@@ -1,0 +1,72 @@
+#challenge1
+prenom=input("Entrez votre prenom: ")
+nom=input("Entrez votre nom: ")
+age=input("Entrez votre age: ")
+print("Bonjour " + prenom + " " + nom +  "votre age est " + "" +age + "" + "ans")
+
+#challenge2
+nom=input("Entrez votre nom: ")
+salaire=float(input("Entrez votre salaire: "))
+nbr_heures=float(input("Entrez le nombre d'heures travaillées: "))
+if nbr_heures > 40:
+    supp =  nbr_heures - 40
+    salaire_horaire = supp *1.5* salaire
+    print("Votre salaire horaire est de " + str(salaire_horaire) + " dh.")
+    salaire_total = salaire*40 + salaire_horaire
+    print(" Bonjour " +nom+ " Votre salaire total est de " + str(salaire_total) + " dh.")
+else:
+    print("Bonjour " + nom + ", vous n'avez pas travaillé plus de 40 heures, donc votre salaire reste le même: " + str(salaire) + " dh.")
+
+#challenge3
+try:
+    nom=input("Entrez votre nom: ")
+    salaire=float(input("Entrez votre salaire: "))
+    nbr_heures=int(input("Entrez le nombre d'heures travaillées: "))
+    if nbr_heures > 40:
+        supp =  nbr_heures - 40
+        salaire_horaire = supp *1.5* salaire
+        print("Votre salaire horaire est de " + str(salaire_horaire) + " dh.")
+        salaire_total = salaire*40 + salaire_horaire
+        print(" Bonjour " +nom+ " Votre salaire total est de " + str(salaire_total) + " dh.")
+    else:
+        print("Bonjour " + nom + ", vous n'avez pas travaillé plus de 40 heures, donc votre salaire reste le même: " + str(salaire) + " dh.")
+except ValueError:
+    print("Veuillez entrer un nombre valide pour le salaire et le nombre d'heures travaillées.")
+
+#challenge4
+n1=float(input("Entrez le premier nombre: "))
+n2=float(input("Entrez le deuxième nombre: "))
+if n1*n2 > 0:
+    print("Le produit de " + str(n1) + " et " + str(n2) + " est positif.")
+elif n1*n2 < 0:
+    print("Le produit de " + str(n1) + " et " + str(n2) + " est négatif.")
+else:
+    print("Le produit de " + str(n1) + " et " + str(n2) + " est nul.")
+
+#challenge5
+n=int(input("Entrez le nombre d'iteration: "))
+i=1
+s=0
+while i <= n:
+    s=i+s
+    i+=1
+print("La somme des entiers de 0 à " + str(n) + " est: " + str(s))
+
+#challenge6
+chaine = input("Entrez une chaîne de caractères: ")
+i=0
+while i==0:
+    chaineinverse = chaine[::-1]
+    i=1
+    print("La chaîne inversée est: " + chaineinverse)
+
+#challenge7
+import math
+x1=float(input("Entrez la valeur de x1: "))
+y1=float(input("Entrez la valeur de y1: "))
+x2=float(input("Entrez la valeur de x2: "))
+y2=float(input("Entrez la valeur de y2: "))
+distance = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5 #methode1
+print("La distance entre les points (" + str(x1) + ", " + str(y1) + ") et (" + str(x2) + ", " + str(y2) + ") est: " + str(distance))
+d=math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2) #methode2
+print("La distance entre les points " + str(d))
