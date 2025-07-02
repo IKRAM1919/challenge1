@@ -1,0 +1,64 @@
+#challenge 1
+notes = [12, 4, 14, 11, 18, 13, 7, 10, 5, 9, 15, 8, 14, 16]
+newlist = []
+s=sum(notes) #la somme
+m= s / len(notes) #la moyenne
+for elem in notes:
+        if elem > m:
+          newlist.append(elem)
+print("La somme est :", s)
+print("La moyenne est :", m)
+print("Les notes sont :", notes)
+print("Les notes supérieures à la moyenne sont :", newlist)
+
+#challenge 2
+Ch1 = "Le langage Python est très populaire"
+Ch2 = "Python est un langage puissant"
+#decouper les mots communs
+mot1 = set(Ch1.split())
+mot2 = set(Ch2.split())
+#trouver les mots communs
+communs = mot1.intersection(mot2)
+print("Les mots communs sont :", communs)
+
+#challenge 3
+stock = ["Stylo", 25, "Classeur", 100, "Crayon", 12, "Surligneur", 40, "Feutre", 5]
+print('liste initiale :', stock)
+ch= []
+val= []
+for elem in stock:
+    if isinstance(elem, str):
+        ch.append(elem)
+    else:
+        val.append(elem)
+print('Liste des chaines :', ch)
+print('Liste des valeurs :', val)
+#trier
+ch.sort()
+val.sort(reverse=True)
+print('Liste des chaines triées :', ch)
+print('Liste des valeurs triées :', val)
+
+#challenge 4
+def rechercheElement(liste, element):
+    pos = liste.index(element) 
+    if element in liste:
+        return pos
+    else:
+        return False
+# Exemple d'utilisation
+liste = [1, 2, 3, 4, 5]
+element = 3
+resultat = rechercheElement(liste, element)
+if resultat is not False:
+    print(f"L'élément {element} se trouve à l'index {resultat}.")
+
+#challenge 5
+L = [7 , 23 , 5 , 23 , 7 , 19 , 23 , 12 , 29]
+a=int(input("Entrez un nombre : "))
+compteur = 0
+for elem in L:
+    if elem == a:
+        compteur += 1
+print(f"Le nombre {a} apparaît {compteur} fois dans la liste.")
+
